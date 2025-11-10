@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .first{
+            margin: 20px 20px;
+            background-color: rgb(224, 159, 170);
+            height: 500px;
+            /* width: auto; */
+            border: 10px solid white;
+            flex-wrap: wrap;
+        }
+        body{
+            background-color: pink;
+            /* width: auto; */
+        }
+        spam{
+            color: aliceblue;
+
+            font-size: xx-large;
+            /* text-align: center; */
+            /* align-items: center; */
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+            font-family: cursive;
+            
+        }
+        .sec{
+            color: azure;
+            display: flex;
+            gap: 7px;
+            font-size: x-large;
+            margin: 0px 20px;
+            flex-wrap: wrap;
+            
+        }
+    </style>
+</head>
+<body class="v">
+    <div class="first v" >
+        <video src="shubham.mp4" id="vid" style="height: 100vh; width: 100%; display: none;"></video>
+        <spam>Helloww!</spam>
+        <div class="sec" >Wanna see <b>prettiest</b>  and <b>cutest</b> girl ?? If yes then <button onClick="playVideo()">CLICK HERE</button></div>
+    </div>
+</body>
+<script>
+        function playVideo(){
+
+            let vid = document.getElementById("vid");
+            let elements = document.getElementsByClassName("v");
+            let b = document.getElementsByClassName("first")[0];
+            b.style.border="none";
+
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.backgroundColor = "black";
+            }
+            vid.style.display="block";
+            vid.play();
+        }
+</script>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Play Video Example</title>
+</head>
+<body>
+
+<video id="myVideo" width="400">
+    <source src="shubham.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<br>
+<button type="button" onclick="playVideo()">Play Video</button>
+
+<script>
+function playVideo() {
+    document.getElementById('myVideo').play();
+}
+</script>
+
+</body>
+</html> -->
